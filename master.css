@@ -83,7 +83,6 @@ body{
   position: relative;
 }
 .section_full .container{
-	/*position: absolute;*/
   text-align: center;
 }
 .section_full .container h1{
@@ -95,30 +94,6 @@ body{
 }
 
 
-
-/*Typed Animation*/
-
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
 
 
 /*Two Column*/
@@ -178,6 +153,41 @@ body{
   width: 64px;
   height: 64px;
 }
+
+
+
+
+
+
+/*===============================
+        Fancy Customization
+================================*/
+
+
+/*Typed Animation*/
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
 
 
 /*Arrow*/
