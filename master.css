@@ -101,12 +101,13 @@ body{
 .two_column{
 }
 
+
+/*Left Column*/
 .two_column .left_column .inner{
   padding: 5em;
   background-color: #fff;
   text-align: center;
 }
-
 
 .two_column .left_column{
 	background: #ddd;
@@ -128,30 +129,31 @@ body{
           transition: all 1s ease;
 }
 
-
 .two_column .left_column img:hover{
   -webkit-filter: none;
   filter: none;
 }
 
+
+/*Right Column*/
 .two_column .right_column{
   background: #151F27;
   height: 100vh;
-  padding: 5em 3em;
 }
 
-.two_column .right_column .inner{
-  padding: 1em;
-  background: #151F27;
-  border: 1px solid #2E3B46;
-  color: #FFF;
+.two_column .right_column .right_column_top{
+
 }
 
+.two_column .right_column .right_column_bottom{
+}
 
-.dev .code img{
-  display: inline-block;
-  width: 64px;
-  height: 64px;
+.two_column .right_column .right_column_bottom:before{
+
+}
+
+.two_column .right_column .right_column_bottom:after{
+  
 }
 
 
