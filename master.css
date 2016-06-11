@@ -111,7 +111,7 @@ body{
 
 .two_column .left_column{
 	background: #ddd;
-	height: 100vh;
+	min-height: 100vh;
 	padding: 5em;
 }
 
@@ -138,16 +138,29 @@ body{
 /*Right Column*/
 .two_column .right_column{
   background: #151F27;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .two_column .right_column .right_column_top{
-
+  min-height: 312px;
+  padding: 5em 3em;
 }
 
-.two_column .right_column .right_column_bottom{  
+.two_column .right_column .right_column_bottom{
+  min-height: 312px; 
   background-color: #fff;
+  padding: 5em 3em;
   transform: rotate(5deg);
+}
+
+.two_column .right_column .right_column_bottom .inner{
+  transform: rotate(-5deg);
+  overflow: hidden
+}
+
+.two_column .right_column .right_column_bottom .single{
+  position: relative;
+  z-index: 5;
 }
 
 .two_column .right_column .right_column_bottom:before{
@@ -155,7 +168,14 @@ body{
 }
 
 .two_column .right_column .right_column_bottom:after{
-  
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 51px;
+  z-index: -0;
+  bottom: -25px;
+  transform: rotate(-5deg);
+  left: 0;
 }
 
 
