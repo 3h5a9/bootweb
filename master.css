@@ -270,7 +270,7 @@ body{
 
 
 .location{
-  padding: 5em;
+  padding: 1em 5em 1em 5em;
   height: 100vh;
 }
 
@@ -362,17 +362,8 @@ body{
 
 /*Fancy Image*/
 .view {
-    /*width: 300px;*/
-    /*height: 200px;*/
-    /*margin: 10px;*/
-    /*float: left;*/
-    /*border: 10px solid #fff;*/
-    /*overflow: hidden;*/
-    /*position: relative;*/
+    border: 1px solid #fff;
     text-align: center;
-    /*box-shadow: 1px 1px 2px #e6e6e6;*/
-    /*cursor: default;*/
-    /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
 }
 .view .mask, .view .content {
     width: 100%;
@@ -475,6 +466,9 @@ body{
 
 #map_canvas{
   width: 100%;
-  min-height: 500px;
+  min-height: 475px;
 }
 
+.gmnoprint, .gm-bundled-control, .gm-bundled-control-on-bottom{
+  /*display: none;*/
+}

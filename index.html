@@ -227,20 +227,12 @@
       </div>
     </div>
 
-    <!-- <div class="stripe">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 no-space">
-            <div class="gradient-pattern"></div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="location">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 no-space">
+            <h1 class="text-center">You Can Find Me Here.</h1>
+            <address class="text-center">H.N:26, EhsanManzil, SheikhPara, Boalia, G.P.O:6000, Rajshahi</address>
             <div id="map_canvas"></div>
           </div>
         </div>
@@ -295,11 +287,25 @@
       var infowindow = new google.maps.InfoWindow({
       content: ""
       });
+      var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">OnePixMedia</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>H.N:26</b>, ' +
+      '<b>EhsanManzil</b> '+
+      '<b>SheikhPara, Boalia, G.P.O:6000, Rajshahi</b>'+
+      '</div>'+
+      '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
        
       var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
-      title: ""
+      title: "OnePixMedia"
       });
        
       google.maps.event.addListener(marker, 'click', function() {
