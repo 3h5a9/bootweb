@@ -227,6 +227,26 @@
       </div>
     </div>
 
+    <!-- <div class="stripe">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 no-space">
+            <div class="gradient-pattern"></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="location">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 no-space">
+            <div id="map_canvas"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -239,6 +259,7 @@
     <script src="js/main4.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/typed.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
 
     <!-- Smooth Scroll -->
     <script>
@@ -253,7 +274,38 @@
       });
     </script>
 
-
-    
+    <script>
+      window.onload = function() {
+      initialize();
+      }
+       
+      function initialize() {
+      var myLatlng = new google.maps.LatLng(24.368609, 88.590102);
+       
+      var myOptions = {
+      zoom: 15,
+      scrollwheel:  false,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [{"featureType":"water","elementType":"all","stylers":[{"color":"#3b5998"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"all","stylers":[{"hue":"#3b5998"},{"saturation":-22}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"on"},{"color":"#f7f7f7"},{"saturation":10},{"lightness":76}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"color":"#f7f7f7"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"color":"#8b9dc3"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"visibility":"simplified"},{"color":"#3b5998"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"},{"color":"#8b9dc3"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"},{"color":"#8b9dc3"}]},{"featureType":"transit.line","elementType":"all","stylers":[{"invert_lightness":false},{"color":"#ffffff"},{"weight":0.43}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#8b9dc3"}]},{"featureType":"administrative","elementType":"labels.icon","stylers":[{"visibility":"on"},{"color":"#3b5998"}]}]
+      }
+       
+      var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+       
+      var infowindow = new google.maps.InfoWindow({
+      content: ""
+      });
+       
+      var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: ""
+      });
+       
+      google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+      });
+      }
+      </script>
   </body>
 </html>

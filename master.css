@@ -269,6 +269,11 @@ body{
 }
 
 
+.location{
+  padding: 5em;
+  height: 100vh;
+}
+
 
 
 /*===============================
@@ -463,3 +468,13 @@ body{
     transform: translateY(0px);
   transition-delay: 0.3s;
 }
+
+
+
+/*Map*/
+
+#map_canvas{
+  width: 100%;
+  min-height: 500px;
+}
+
