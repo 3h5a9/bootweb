@@ -65,13 +65,26 @@
         </div>
       </div>
 
-      <a data-scroll href="#p1" style="visibility: inherit; opacity: 1;">
+      <a class="page-scroll" href="#two" style="visibility: inherit; opacity: 1;">
         <svg class="arrows">
           <path class="a1" d="M0 0 L30 32 L60 0"></path>
           <path class="a2" d="M0 20 L30 52 L60 20"></path>
           <path class="a3" d="M0 40 L30 72 L60 40"></path>
         </svg>
       </a>
+			
+
+
+			<div id="foo">
+				<a class="scrollpixone page-scroll" href="#two" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixtwo page-scroll" href="#three" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixthree page-scroll" href="#four" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixfour page-scroll" href="#five" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixfive page-scroll" href="#six" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixsix page-scroll" href="#seven" style="visibility: inherit; opacity: 1;"></a>
+			</div>
+				
+    	</div>
     </div>
 
     <!-- Animated Text -->
@@ -83,7 +96,7 @@
       </div>
     </div>
 
-    <div id="two" class="two_column" id="p1">
+    <div id="two" class="two_column">
       <div class="container-fluid">
         <div class="row">
           
@@ -290,12 +303,9 @@
                 <i class="fa fa-youtube"></i>
               </a>
             </div>
-            <div class="col-md-4 copyright">
+            <div class="col-md-8 copyright">
               <p>&copy; 2016 OnePixMedia</p>
             </div>
-          <div class="col-md-4">
-            
-          </div>
         </div>
       </div>
     </div>
@@ -307,87 +317,20 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script> 
     <script src="js/master.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
     <script src="js/snap.svg-min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/main4.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="http://maps.google.com/maps/api/js"></script>
-
-    <!-- Smooth Scroll -->
-    <script>
-      smoothScroll.init({
-        selector: '[data-scroll]', // Selector for links (must be a valid CSS selector)
-        selectorHeader: '[data-scroll-header]', // Selector for fixed headers (must be a valid CSS selector)
-        speed: 1000, // Integer. How fast to complete the scroll in milliseconds
-        easing: 'easeInOutCubic', // Easing pattern to use
-        offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
-        updateURL: true, // Boolean. If true, update the URL hash on scroll
-        callback: function ( anchor, toggle ) {} // Function to run after scrolling
-      });
-    </script>
-
-    <script>
-      window.onload = function() {
-      initialize();
-      }
-       
-      function initialize() {
-      var myLatlng = new google.maps.LatLng(24.368609, 88.590102);
-       
-      var myOptions = {
-      zoom: 15,
-      scrollwheel:  false,
-      center: myLatlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: [{"featureType":"water","elementType":"all","stylers":[{"color":"#3b5998"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"all","stylers":[{"hue":"#3b5998"},{"saturation":-22}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"on"},{"color":"#f7f7f7"},{"saturation":10},{"lightness":76}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"color":"#f7f7f7"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"color":"#8b9dc3"}]},{"featureType":"administrative.country","elementType":"geometry.stroke","stylers":[{"visibility":"simplified"},{"color":"#3b5998"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"},{"color":"#8b9dc3"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"},{"color":"#8b9dc3"}]},{"featureType":"transit.line","elementType":"all","stylers":[{"invert_lightness":false},{"color":"#ffffff"},{"weight":0.43}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#8b9dc3"}]},{"featureType":"administrative","elementType":"labels.icon","stylers":[{"visibility":"on"},{"color":"#3b5998"}]}]
-      }
-       
-      var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-       
-      var infowindow = new google.maps.InfoWindow({
-      content: ""
-      });
-      var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">OnePixMedia</h1>'+
-      '<div id="bodyContent">'+
-      '<p><b>H.N:26</b>, ' +
-      '<b>EhsanManzil</b> '+
-      '<b>SheikhPara, Boalia, G.P.O:6000, Rajshahi</b>'+
-      '</div>'+
-      '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-       
-      var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: "OnePixMedia"
-      });
-       
-      google.maps.event.addListener(marker, 'click', function() {
-      infowindow.open(map,marker);
-      });
-      }
-    </script>
-
-    <script>
-      // jQuery for page scrolling feature - requires jQuery Easing plugin
-      $(function() {
-          $('a.page-scroll').bind('click', function(event) {
-              var $anchor = $(this);
-              $('html, body').stop().animate({
-                  scrollTop: $($anchor.attr('href')).offset().top
-              }, 1500, 'easeInOutExpo');
-              event.preventDefault();
-          });
-      });
-    </script>  
+		<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+		
+		<script>
+			// JavaScript
+			window.sr = ScrollReveal();
+			sr.reveal('.foo');
+			sr.reveal('.bar');
+		</script>
 
   </body>
 </html>

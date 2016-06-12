@@ -234,7 +234,7 @@ body{
 /*Works*/
 .works{
 	padding: 1em 0em 0em 0em;
-	background-color: #03A9F4;
+	background-color: #3F51B5;
 	min-height: 600px;
 	position: relative;
 }
@@ -243,6 +243,7 @@ body{
 	font-size: 4em;
 	margin-bottom: 1.1em;
 	padding-bottom: 20px;
+  color: #fff;
 }
 
 .works h1:after{
@@ -283,6 +284,7 @@ body{
 .contact{
   padding: 5em;
   background-color: #F7F7F7;
+  min-height: 585px;
 }
 
 
@@ -562,4 +564,62 @@ body{
   -moz-transition:.5s;
   transition: .5s;
   color: #fff;
+}
+
+
+
+
+.scrollpixone{
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #F44336;
+  top: 50%;
+  z-index: 500;
+  right: 3%;
+  border-radius: 10px;
+}
+
+.scrollpixtwo{
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #F44336;
+  top: 53%;
+  z-index: 500;
+  right: 3%;
+  border-radius: 10px;
+}
+
+.scrollpixthree{
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #F44336;
+  top: 56%;
+  z-index: 500;
+  right: 3%;
+  border-radius: 10px;
+}
+
+.scrollpixfour{
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #F44336;
+  top: 59%;
+  z-index: 500;
+  right: 3%;
+  border-radius: 10px;
+}
+
+.scrollpixfive{
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #F44336;
+  top: 62%;
+  z-index: 500;
+  right: 3%;
+  border-radius: 10px;
 }
