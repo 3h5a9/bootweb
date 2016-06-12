@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed);
 
 
+
 .no-space{
 	padding: 0;
 	overflow: hidden;
@@ -272,6 +273,80 @@ body{
 .location{
   padding: 1em 5em 1em 5em;
   height: 100vh;
+  overflow: hidden;
+  background-color: #F7F7F7;
+}
+
+
+
+/*Contact*/
+.contact{
+  padding: 5em;
+  background-color: #F7F7F7;
+}
+
+
+
+
+
+
+
+/*Footer*/
+.footer{
+}
+
+.foot_social a{
+  text-decoration: none;
+  float: left;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+.foot_social{
+  background: #ddd;
+  padding: 1em 5.5em;
+  overflow: hidden;
+}
+
+.foot_social:before{
+  content: '';
+}
+
+.foot_social:after{
+  content: '';
+  left: 70%;
+  top: 0;
+  border-top: 58px solid #fff;
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-left: 135px solid transparent;
+  position: absolute;
+}
+
+.copyright{
+  background: #3F51B5;
+  padding: 1em 5.5em;
+  text-align: center;
+}
+
+.copyright p{
+  color: #fff;
+  margin: 5px 0px 5px 0px;
+}
+
+.copyright:before{
+  content: '';
+  position: absolute;
+  border-top: 58px solid #3F51B5;
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-left: 134px solid transparent;
+  left: -134px;
+  top: 0;
+}
+
+.copyright:after{
+  content:'';
 }
 
 
@@ -471,4 +546,20 @@ body{
 
 .gmnoprint, .gm-bundled-control, .gm-bundled-control-on-bottom{
   /*display: none;*/
+}
+
+
+
+/*Button Styling*/
+
+.btn{
+  box-shadow: 1px 2px 3px #9E9E9E;
+}
+
+.c1:hover{
+  background: #FF5722;
+  -webkit-transition: .5s;
+  -moz-transition:.5s;
+  transition: .5s;
+  color: #fff;
 }

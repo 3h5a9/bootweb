@@ -28,7 +28,7 @@
   <body>
     
 
-    <div class="top_menu">
+    <div id="one" class="top_menu">
       <div class="menu-wrap">
         <nav class="menu">
           <div class="social icon-list">
@@ -38,12 +38,12 @@
             <a href="#"><i class="fa fa-fw fa-youtube"></i></a>
           </div>
           <div class="icon-list">
-            <a href="#"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-            <a href="#"><i class="fa fa-fw fa-bell-o"></i><span>Alerts</span></a>
-            <a href="#"><i class="fa fa-fw fa-envelope-o"></i><span>Messages</span></a>
-            <a href="#"><i class="fa fa-fw fa-comment-o"></i><span>Comments</span></a>
-            <a href="#"><i class="fa fa-fw fa-bar-chart-o"></i><span>Analytics</span></a>
-            <a href="#"><i class="fa fa-fw fa-newspaper-o"></i><span>Reading List</span></a>
+            <a href="#one" class="page-scroll"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
+            <a href="#two" class="page-scroll"><i class="fa fa-fw fa-bell-o"></i><span>About</span></a>
+            <a href="#three" class="page-scroll"><i class="fa fa-fw fa-envelope-o"></i><span>WorkProcess</span></a>
+            <a href="#four" class="page-scroll"><i class="fa fa-fw fa-comment-o"></i><span>Portfolio</span></a>
+            <a href="#five" class="page-scroll"><i class="fa fa-fw fa-bar-chart-o"></i><span>location</span></a>
+            <a href="#six" class="page-scroll"><i class="fa fa-fw fa-newspaper-o"></i><span>contact</span></a>
           </div>
         </nav>
 
@@ -74,6 +74,7 @@
       </a>
     </div>
 
+    <!-- Animated Text -->
     <div class="section_full">
       <div class="container">
         <div class="content">
@@ -82,7 +83,7 @@
       </div>
     </div>
 
-    <div class="two_column" id="p1">
+    <div id="two" class="two_column" id="p1">
       <div class="container-fluid">
         <div class="row">
           
@@ -130,7 +131,7 @@
       </div>
     </div>
 
-    <div class="full_text">
+    <div id="three" class="full_text">
       <div class="container">
         <div class="row inner">
           <div class="col-md-12">
@@ -155,7 +156,7 @@
       </div>
     </div>
 
-    <div class="works">
+    <div id="four" class="works">
       <div class="container-fluid">
         <div class="row">
           <h1 class="text-center">Few of Our Works</h1>
@@ -227,13 +228,73 @@
       </div>
     </div>
 
-    <div class="location">
+    <div id="five" class="location">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12 no-space">
             <h1 class="text-center">You Can Find Me Here.</h1>
             <address class="text-center">H.N:26, EhsanManzil, SheikhPara, Boalia, G.P.O:6000, Rajshahi</address>
             <div id="map_canvas"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="six" class="contact">
+      <div class="container">
+        <div class="row">
+          <h1 class="text-center">Contact Us</h1>
+          <div class="col-md-4 col-md-offset-2">
+            <div class="form-group">
+              <label for="name" class="col-sm-2 control-label">Name</label>
+              <input type="text" class="form-control" placeholder="Your Name *" id="name" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-4 col">
+            <div class="form-group">
+              <label for="emaill" class="col-sm-2 control-label">Email</label>
+              <input type="email" class="form-control" placeholder="Your Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <textarea class="form-control" rows="5" placeholder="Your Message *" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-xl c1">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="seven" class="footer">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 foot_social">
+              <a href="#">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-google-plus"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-youtube"></i>
+              </a>
+            </div>
+            <div class="col-md-4 copyright">
+              <p>&copy; 2016 OnePixMedia</p>
+            </div>
+          <div class="col-md-4">
+            
           </div>
         </div>
       </div>
@@ -246,6 +307,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script> 
     <script src="js/master.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/snap.svg-min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/main4.js"></script>
@@ -312,6 +374,20 @@
       infowindow.open(map,marker);
       });
       }
-      </script>
+    </script>
+
+    <script>
+      // jQuery for page scrolling feature - requires jQuery Easing plugin
+      $(function() {
+          $('a.page-scroll').bind('click', function(event) {
+              var $anchor = $(this);
+              $('html, body').stop().animate({
+                  scrollTop: $($anchor.attr('href')).offset().top
+              }, 1500, 'easeInOutExpo');
+              event.preventDefault();
+          });
+      });
+    </script>  
+
   </body>
 </html>
