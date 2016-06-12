@@ -569,12 +569,25 @@ body{
 
 
 
+/*Scroll To Next Page*/
+.scrollpix {
+  display: none;
+}
+
+.scrollpix a,{
+  text-decoration: none;
+}
+.scrollpix a:hover{
+  text-decoration: none;
+}
+
+
 .scrollpixone{
   position: fixed;
   width: 10px;
   height: 10px;
   background: #F44336;
-  top: 50%;
+  top: 42%;
   z-index: 500;
   right: 3%;
   border-radius: 10px;
@@ -585,7 +598,7 @@ body{
   width: 10px;
   height: 10px;
   background: #F44336;
-  top: 53%;
+  top: 45%;
   z-index: 500;
   right: 3%;
   border-radius: 10px;
@@ -596,7 +609,7 @@ body{
   width: 10px;
   height: 10px;
   background: #F44336;
-  top: 56%;
+  top: 48%;
   z-index: 500;
   right: 3%;
   border-radius: 10px;
@@ -607,7 +620,7 @@ body{
   width: 10px;
   height: 10px;
   background: #F44336;
-  top: 59%;
+  top: 51%;
   z-index: 500;
   right: 3%;
   border-radius: 10px;
@@ -618,7 +631,18 @@ body{
   width: 10px;
   height: 10px;
   background: #F44336;
-  top: 62%;
+  top: 54%;
+  z-index: 500;
+  right: 3%;
+  border-radius: 10px;
+}
+
+.scrollpixsix{
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #F44336;
+  top: 57%;
   z-index: 500;
   right: 3%;
   border-radius: 10px;

@@ -75,17 +75,18 @@
 			
 
 
-			<div id="foo">
-				<a class="scrollpixone page-scroll" href="#two" style="visibility: inherit; opacity: 1;"></a>
-				<a class="scrollpixtwo page-scroll" href="#three" style="visibility: inherit; opacity: 1;"></a>
-				<a class="scrollpixthree page-scroll" href="#four" style="visibility: inherit; opacity: 1;"></a>
-				<a class="scrollpixfour page-scroll" href="#five" style="visibility: inherit; opacity: 1;"></a>
-				<a class="scrollpixfive page-scroll" href="#six" style="visibility: inherit; opacity: 1;"></a>
-				<a class="scrollpixsix page-scroll" href="#seven" style="visibility: inherit; opacity: 1;"></a>
+			<div id="foo" class="scrollpix">
+				<a class="scrollpixone page-scroll" href="#one" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixtwo page-scroll" href="#two" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixthree page-scroll" href="#three" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixfour page-scroll" href="#four" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixfive page-scroll" href="#five" style="visibility: inherit; opacity: 1;"></a>
+				<a class="scrollpixsix page-scroll" href="#six" style="visibility: inherit; opacity: 1;"></a>
 			</div>
 				
     	</div>
     </div>
+
 
     <!-- Animated Text -->
     <div class="section_full">
@@ -323,13 +324,16 @@
     <script src="js/main4.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="http://maps.google.com/maps/api/js"></script>
-		<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
 		
 		<script>
-			// JavaScript
-			window.sr = ScrollReveal();
-			sr.reveal('.foo');
-			sr.reveal('.bar');
+			$(document).scroll(function () {
+			    var y = $(this).scrollTop();
+			    if (y > 400) {
+			        $('.scrollpix').fadeIn();
+			    } else {
+			        $('.scrollpix').fadeOut();
+			    }
+			});
 		</script>
 
   </body>
